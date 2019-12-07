@@ -1,0 +1,272 @@
+body {
+    background-color: #f5f5f5;
+    font-family: 'Sulphur Point', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 
+PRIMER SECCIÓN
+*/
+#ventas-contenedor {
+    background-color: white;
+    border-radius: 2px;
+    width: 85%;
+    margin: 50px 0px 60px 100px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+    display: flex;
+    background-image: linear-gradient(to right, #ffabc9, #eba7d7, #cfa7e2, #ada7e8, #86a8e7);
+    border-radius: 3px;
+    justify-content: space-between;
+    padding: 0px 40px 0px 40px;
+    color: white;
+}
+.btn-agregar-venta {
+    background: none;
+    border: 1px white solid;
+    border-radius: 40px;
+    height: 35px;
+    color: white;
+    margin: 25px;
+    font-size: 16px;
+}
+.btn-agregar-venta:hover {
+    background-color: #fcfcfc71;
+}
+#ventas {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Columna con cada item */
+.ventas-columna {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 2px #dbd7d8 solid;
+    font-weight: bold;
+    background-color: white;
+}
+.fecha-columna {
+    width: 6%;
+}
+.sucursal-columna {
+    width: 7%;
+}
+.vendedora-columna {
+    width: 5%;
+}
+.componentes-columna {
+    width: 30%;
+}
+.precio-columna {
+    width: 13%;
+}
+
+/* Cada venta individual */
+.venta {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px #dbd7d8 solid;
+}
+.venta:hover {
+    background-color: #dfdddda1;
+}
+.fa-trash:hover {
+    color: palevioletred;
+}
+.fecha {
+    width: 6%;
+}
+.sucursal {
+    width: 7%;
+}
+.vendedora {
+    width: 5%;
+}
+.componentes {
+    width: 30%;
+}
+
+/* 
+SEGUNDA SECCIÓN
+*/
+#ventas-sucursal {
+    width: 85%;
+    margin: 0px 0px 60px 100px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#total-ventas {
+    width: 53%;
+}
+#venta-sucursal-ul {
+    padding: 0px;
+}
+
+.sucursal-item {
+    list-style: none;
+    display: flex;
+    padding: 20px;
+    border-bottom: 1px #dbd7d8 solid;
+}
+.sucursal-item:last-child {
+    border: none;
+}
+.sucursal-li {
+    width: 50%;
+}
+.ventasSucursal {
+    width: 55%;
+}
+
+/* Footer */
+.footer {
+    width: 85%;
+    margin: 0px 0px 60px 100px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.vendedora-mayor {
+    padding: 10px 20px 20px 20px;
+}
+.producto-estrella {
+    padding: 20px;
+}
+
+/* CSS Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.modal.active {
+    display: block;
+}
+.modal-eliminar.active {
+    display: block;
+}
+
+.modal-header {
+    background-image: linear-gradient(to right, #ffabc9, #eba7d7, #cfa7e2, #ada7e8, #86a8e7);
+    border-radius: 5px;
+    padding: 5px 40px 0px 40px;
+    color: white;
+    height: 50px;
+    font-size: 29px;
+    display: flex;
+    justify-content: space-between;
+}
+.btn-x-modal {
+    background: none;
+    border: 1px white solid;
+    border-radius: 40px;
+    height: 40px;
+    color: white;
+    width: 40px;
+    font-size: 20px;
+    margin: 2px -20px;
+}
+.btn-x-modal:hover {
+    background-color: #fcfcfc71;
+}
+
+.modal .modal-backdrop {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    opacity: 0.3;
+}
+
+.modal .modal-container {
+    position: absolute;
+    background-color: white;
+    top: 15px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 400px;
+    height: 450px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+.modal-container-eliminar {
+    position: absolute;
+    background-color: white;
+    top: 15px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    height: 260px;
+}
+.modal-body {
+    padding: 30px 30px 10px 30px;
+}
+.modal-body-eliminar {
+    padding: 20px 30px 20px 30px;
+}
+.modal-footer-eliminar {
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.input-container {
+    margin-bottom: 20px;
+}
+.label-input {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+}
+.modal-select {
+    width: 340px;
+    height: 36px;
+}
+#componentes {
+    height: 86px;
+}
+
+/* Footer */
+.modal-footer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* Botones del modal Cerrar y Agregar */
+.btn-cerrar-modal,
+.btn-agregar-modal {
+    background: none;
+    border: 1px #f85e94 solid;
+    border-radius: 40px;
+    height: 35px;
+    color: #f85e94;
+    width: 165px;
+}
+.btn-eliminar-modal {
+    background-color: palevioletred;
+    border: 1px palevioletred solid;
+    border-radius: 40px;
+    height: 35px;
+    color: white;
+    width: 165px;
+}
+.btn-agregar-modal:hover {
+    background-color: #fce1eb;
+}
+.btn-cerrar-modal:hover {
+    background-color: #fce1eb;
+}

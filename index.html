@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Ventas de PC</title>
+        <link rel="stylesheet" href="./style.css" />
+        <script src="https://kit.fontawesome.com/a83280f0d9.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Sulphur+Point:300,400,700&display=swap" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Primer sección "Ventas" -->
+        <div id="ventas-contenedor">
+            <header class="header">
+                <h1 class="title-header">Ventas</h1>
+                <button class="btn-agregar-venta">
+                    <i class="fas fa-plus-circle"></i>
+                    <span>Agregar venta</span>
+                </button>
+            </header>
+            <div class="ventas-columna">
+                <div class="fecha-columna">Fecha</div>
+                <div class="sucursal-columna">Sucursal</div>
+                <div class="vendedora-columna">Vendedora</div>
+                <div class="componentes-columna">Componentes</div>
+                <div class="precio-columna">Precio</div>
+            </div>
+            <ul id="ventas"></ul>
+        </div>
+
+        <!-- Segunda sección "Ventas por Sucursal"-->
+        <div id="ventas-sucursal">
+            <header class="header">
+                <h1 class="title-header">Ventas por sucursal</h1>
+            </header>
+            <div class="ventas-columna">
+                <div>Sucursal</div>
+                <div id="total-ventas">Total ventas</div>
+            </div>
+            <ul id="venta-sucursal-ul"></ul>
+        </div>
+
+        <!-- Footer "Producto estrella" y "Vendedora mas ingresos" -->
+        <footer class="footer">
+            <div class="producto-estrella" id="producto-estrella"></div>
+            <div class="vendedora-mayor" id="vendedora-mayor"></div>
+        </footer>
+
+        <!-- Modal agregar venta-->
+        <div class="modal" id="modal-new-sale">
+            <!-- Capa oscura -->
+            <div class="modal-backdrop"></div>
+
+            <!-- Contenido del modal -->
+            <div class="modal-container">
+                <div class="modal-header">
+                    <span>Agregar venta</span>
+                    <button class="btn-x-modal">X</button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <!-- Vendedoras -->
+                        <div class="input-container">
+                            <label class="label-input">Vendedoras</label>
+                            <select name="Vendedora" class="modal-select" id="vendedora">
+                                <option value=""></option>
+                                <option value="Ada">Ada</option>
+                                <option value="Grace">Grace</option>
+                                <option value="Hedy">Hedy</option>
+                                <option value="Sheryl">Sheryl</option>
+                            </select>
+                        </div>
+
+                        <!-- Componentes -->
+                        <div class="input-container">
+                            <label class="label-input">Componentes</label>
+                            <select name="Componentes" class="modal-select" id="componentes" multiple>
+                                <option value="Monitor GPRS 3000">Monitor GPRS 3000</option>
+                                <option value="Motherboard ASUS 1500">Motherboard ASUS 1500</option>
+                                <option value="Monitor ASC 543">Monitor ASC 543</option>
+                                <option value="Motherboard ASUS 1200">Motherboard ASUS 1200</option>
+                                <option value="Motherboard MZI">Motherboard MZI</option>
+                                <option value="HDD Toyiva">HDD Toyiva</option>
+                                <option value="HDD Wezter Dishital">HDD Wezter Dishital</option>
+                                <option value="RAM Quinston">RAM Quinston</option>
+                                <option value="RAM Quinston Fury">RAM Quinston Fury</option>
+                            </select>
+                        </div>
+                        <!-- Sucursal -->
+                        <div class="input-container">
+                            <label class="label-input">Sucursal</label>
+                            <select name="Sucursal" class="modal-select" id="sucursal">
+                                <option value=""></option>
+                                <option value="Centro">Centro</option>
+                                <option value="Caballito">Caballito</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-cerrar-modal">Cancelar</button>
+                    <button class="btn-agregar-modal">Agregar</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Confirmación eliminar -->
+        <div class="modal modal-eliminar" id="modal-eliminar">
+            <!-- Capa oscura -->
+            <div class="modal-backdrop"></div>
+
+            <!-- Contenido del modal -->
+            <div class="modal-container-eliminar">
+                <header class="modal-header">
+                    <span>Eliminar venta</span>
+                    <button class="btn-x-modal">X</button>
+                </header>
+                <div class="modal-body-eliminar">
+                    <h3>¿Estás segura?</h3>
+                    <span>Esta acción no se puede revertir.</span>
+                </div>
+                <div class="modal-footer-eliminar">
+                    <button class="btn-cerrar-modal">Cancelar</button>
+                    <button class="btn-eliminar-modal" onclick="eliminarCard('card-${id}')">Eliminar</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="./index.js"></script>
+    </body>
+</html>
